@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.wrangler/
+coverage/
+*.tsbuildinfo
+
+# Kredensial — semua .env kecuali template
+.env*
+!.env.example
+
+# Platform & editor
+.vercel/
+.vscode/
+.idea/
+.DS_Store
+
+# Log & file sementara
+*.log
+*.local
+
+# Data wish asli (memuat UID) — jangan pernah masuk repo
+*.uigf.json
+wish-export*.json

@@ -1,0 +1,16 @@
+name = "genshin-pity-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+# Worker ini stateless: tanpa KV, tanpa D1, tanpa Durable Object.
+# Jangan menambahkan binding penyimpanan apa pun - tidak ada yang perlu disimpan.
+
+[observability]
+# Logging DIMATIKAN dengan sengaja. Request memuat authkey (kredensial) dan UID.
+enabled = false
+
+[vars]
+# Kosongkan untuk mengizinkan semua origin (praktis saat dev).
+# Saat produksi, isi dengan origin situsmu, dipisah koma:
+#   ALLOWED_ORIGINS = "https://pity.example.com"
+ALLOWED_ORIGINS = ""
